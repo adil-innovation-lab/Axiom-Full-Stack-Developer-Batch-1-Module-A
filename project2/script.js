@@ -10,18 +10,20 @@ populateUI();
 let ticketPrice = +movieSelect.value;
 
 function updateSelectedCount() {
-    // Get all seats that are selected
-    const selectedSeats = document.querySelectorAll('.row .seat.selected');
-    // Get the index of selected seats from all seats
-    const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
-    // Getting the count of total selected seats
-    const selectedSeatsCount = selectedSeats.length;
-    // Updating the UI to show number of selected seats
-    count.innerText = selectedSeatsCount;
-    // Updating the UI to show total price of tickets
-    total.innerText = selectedSeatsCount * ticketPrice;
-    // Saving to Local Storage
-    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
+    if(movieSelect.value !== '') {
+        // Get all seats that are selected
+        const selectedSeats = document.querySelectorAll('.row .seat.selected');
+        // Get the index of selected seats from all seats
+        const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+        // Getting the count of total selected seats
+        const selectedSeatsCount = selectedSeats.length;
+        // Updating the UI to show number of selected seats
+        count.innerText = selectedSeatsCount;
+        // Updating the UI to show total price of tickets
+        total.innerText = selectedSeatsCount * ticketPrice;
+        // Saving to Local Storage
+        localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
+    }
 }
 
 // Save the movie data to local storage
@@ -55,14 +57,16 @@ function populateUI() {
 // Event Listeneres
 // 1. Event listener for container to check for click on seats
 container.addEventListener('click', e => {
-    // Check if target of click is a seat that's not occupied
-    if(e.target.classList.contains('seat') &&
-        !e.target.classList.contains('occupied')
-    ) {
-        // Add or Remove class selected from seat
-        e.target.classList.toggle('selected');
-        // Refreshing counts
-        updateSelectedCount();
+    if(movieSelect.value !== '') {
+        // Check if target of click is a seat that's not occupied
+        if(e.target.classList.contains('seat') &&
+            !e.target.classList.contains('occupied')
+        ) {
+            // Add or Remove class selected from seat
+            e.target.classList.toggle('selected');
+            // Refreshing counts
+            updateSelectedCount();
+        }
     }
 })
 
