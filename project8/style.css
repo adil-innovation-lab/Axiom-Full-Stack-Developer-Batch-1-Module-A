@@ -91,6 +91,45 @@ input[type='text'] {
     opacity: 1;
 }
 
+.selected-meal-details {
+    margin: 30px auto;
+    width: 70%;
+}
+
+.selected-meal-details img {
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px white solid;
+}
+
+.selected-meal-info {
+    margin: 20px;
+    padding: 10px;
+    border: 2px dotted white;
+    border-radius: 10px;
+}
+
+.selected-meal-instructions {
+    margin: 0;
+    letter-spacing: .5px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.selected-meal-instructions ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.selected-meal-instructions ul li {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
 @media (max-width: 500px) {
     input[type='text'] {
         width: 100%;
