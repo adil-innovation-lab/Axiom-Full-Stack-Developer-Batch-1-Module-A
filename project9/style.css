@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E1E8EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin: 30px auto;
+    width: 350px;
+}
+
+h1 {
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+h3 {
+    margin: 40px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #343A40;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.credit-debit-container {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.credit-debit-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.credit-debit-container > div:first-of-type {
+    border-right: 1px solid #343A40;
+}
+
+.money {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    margin: 5px 0;
+}
+
+.money.credit {
+    color: #16C79A;
+}
+
+.money.debit {
+    color: #F55C47;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.list li {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.list li.credit {
+    border-right: 10px solid #16C79A;
+}
+
+.list li.debit {
+    border-right: 10px solid #F55C47;
+}
+
+.delete-btn {
+    background-color: #BE0000;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 3px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%,-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input {
+    border: 1px solid #343A40;
+    border-radius: 5px;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #0F4C81;
+    color: white;
+    border: 0;
+    display: block;
+    font-size: 18px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+}
