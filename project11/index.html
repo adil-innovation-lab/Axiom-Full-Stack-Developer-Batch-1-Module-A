@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+</head>
+<body>
+    <h1>Adil's News Feed</h1>
+    <!-- Add a input field for filtering content -->
+    <div class="filter-container">
+        <input type="text" class="filter" id="filter" placeholder="Filter content" />
+    </div>
+    <!-- Section for News Feed Posts -->
+    <div class="news-feed-container">
+        <!-- First Post -->
+        <div class="post">
+            <!-- This is the Post ID -->
+            <div class="post-id">1</div>
+            <!-- This is the actual content of the post -->
+            <div class="post-content">
+                <!-- Heading for the post title -->
+                <h2 class="post-title">First Post</h2>
+                <!-- Paragraph for the post body -->
+                <p class="post-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error incidunt ipsa officia ratione modi porro? Ipsum corporis consequuntur, praesentium autem, enim soluta deleniti, tempore totam aliquid dicta exercitationem minus sequi.
+                </p>
+            </div>
+        </div>
+        <!-- Second Post -->
+        <div class="post">
+            <!-- This is the Post ID -->
+            <div class="post-id">2</div>
+            <!-- This is the actual content of the post -->
+            <div class="post-content">
+                <!-- Heading for the post title -->
+                <h2 class="post-title">Second Post</h2>
+                <!-- Paragraph for the post body -->
+                <p class="post-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In fugit nisi vitae non assumenda deleniti quisquam voluptatum inventore. Iste, nam?
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- This is the Loader to display animation while API is fetching data -->
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
