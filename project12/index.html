@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Typing Game</title>
+</head>
+<body>
+    <!-- Button element for game settings -->
+    <button class="settings-btn" id="settings-btn">
+        <!-- Icon for settings button -->
+        <i class="fas fa-tools fa-2x"></i>
+    </button>
+
+    <!-- Settings section -->
+    <div class="settings" id="settings">
+        <!-- Form to set settings -->
+        <form id="form">
+            <!-- Difficulty Settings -->
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Main Game Container -->
+    <div class="container">
+        <!-- Heading -->
+        <h2>Fast Typing Game</h2>
+        <!-- Instructions for Player -->
+        <p>Type this word as fast as you can:</p>
+        <!-- Word to type -->
+        <h1 id="word"></h1>
+        <!-- Input for user to type the displayed word -->
+        <input type="text" id="user-word" placeholder="Please type here" autocomplete="off" />
+        <!-- Timer Container -->
+        <p class="timer">
+            Time Remaining: <span id="time">60s</span>
+        </p>
+        <!-- Score Container -->
+        <p class="scorecard">
+            Score: <span id="score">0</span>
+        </p>
+    </div>
+
+    <!-- End of Game Container -->
+    <div class="gameover" id="gameover"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
