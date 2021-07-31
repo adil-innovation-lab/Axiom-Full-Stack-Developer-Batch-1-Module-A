@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Memory Cards</title>
+</head>
+<body>
+    <h1>Memory Cards 
+        <!-- Button for creating new cards -->
+        <button id="add-card" class="btn btn-small">
+            <i class="fas fa-plus"></i>
+        </button>
+        <!-- button to remove existing cards -->
+        <button id="clear-cards" class="btn btn-small">
+            <i class="fas fa-trash"></i>
+        </button>
+    </h1>
+    
+    <!-- Container for cards, can have multiple cards -->
+    <div class="cards-container" id="cards-container">
+
+        
+    </div>
+
+    <!-- Navigation to change cards -->
+    <div class="nav">
+        <!-- Button to go to the previous card -->
+        <button class="btn-nav" id="prev-btn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <!-- Current card info -->
+        <p id="current-card"></p>
+        <!-- Button to go to the next card -->
+        <button class="btn-nav" id="next-btn">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <!-- Container for form to create a new card -->
+    <div class="add-card-container" id="add-card-container">
+        <h1>Add New Card
+            <!-- Button to cancel creating a new card -->
+            <button class="btn btn-small" id="cancel-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </h1>
+        <!-- Form -->
+        <!-- Question -->
+        <div class="add-card-form-group">
+            <label for="question">Question</label>
+            <textarea id="question" class="question-input" placeholder="Enter question here"></textarea>
+        </div>
+        <!-- Answer -->
+        <div class="add-card-form-group">
+            <label for="answer">Answer</label>
+            <textarea id="answer" class="question-input" placeholder="Enter answer here"></textarea>
+        </div>
+        <!-- Submit Button -->
+        <button class="btn" id="add-card-btn">
+            Add Card
+        </button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
